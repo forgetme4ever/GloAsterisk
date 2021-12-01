@@ -1,46 +1,37 @@
 //Problem 1
 let lang; //'ru' or 'en'
-//lang = 'en'
+lang = 'en';
 
-//if case
 const days = {
-    "понедельник": "monday", 
-    "вторник" : "tuesday",
-    "среда": "wednesday", 
-    "четверг": "thursday", 
-    "пятница": "friday", 
-    "суббота": "saturday", 
-    "воскресенье": "sunday"
+    'ru': ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"],
+    'en': ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 }
 
-if (lang == 'ru')   {
-    console.log(Object.keys(days));   
+
+//if case
+
+if (lang === 'ru')   {
+    console.log(days['ru']);   
 } else{
-    console.log(Object.values(days));  
+    console.log(days['en']);  
 }
 
 
 //switch case
-switch(true){
-    case lang == 'ru':
-        const  weekDays = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
-        console.log(weekDays);
-        break
+switch (lang) {
+    case 'ru':
+        console.log(days['ru']);
+        break;
     default:
-        const weekDaysEn = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-        console.log(weekDaysEn);    
+        console.log(days['en']);    
 }
 
 
 //array
-const array = {
-    'ru': ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"],
-    'en': ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-}
-console.log(array[lang]);
+console.log(days[lang]);
 
 
 //Problem 2
 let namePerson
-//namePerson = 'fgfgg'
+//namePerson = 'fgfgg';
 namePerson === 'Артем' ? console.log('director') : namePerson === 'Александр' ? console.log('teacher') : console.log('student'); 

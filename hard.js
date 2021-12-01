@@ -1,11 +1,46 @@
-const  num = 266219
+//Problem 1
+let lang; //'ru' or 'en'
+//lang = 'en'
 
-let mult = 1
-for (i of num.toString().split('')) {
-    mult *= i
+//if case
+const days = {
+    "понедельник": "monday", 
+    "вторник" : "tuesday",
+    "среда": "wednesday", 
+    "четверг": "thursday", 
+    "пятница": "friday", 
+    "суббота": "saturday", 
+    "воскресенье": "sunday"
 }
-console.log(mult);
 
-mult **= 3
+if (lang == 'ru')   {
+    console.log(Object.keys(days));   
+} else{
+    console.log(Object.values(days));  
+}
 
-console.log(mult.toString().slice(0, 2));
+
+//switch case
+switch(true){
+    case lang == 'ru':
+        const  weekDays = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+        console.log(weekDays);
+        break
+    default:
+        const weekDaysEn = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+        console.log(weekDaysEn);    
+}
+
+
+//array
+const array = {
+    'ru': ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"],
+    'en': ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+}
+console.log(array[lang]);
+
+
+//Problem 2
+let namePerson
+//namePerson = 'fgfgg'
+namePerson === 'Артем' ? console.log('director') : namePerson === 'Александр' ? console.log('teacher') : console.log('student'); 

@@ -1,37 +1,11 @@
-//Problem 1
-let lang; //'ru' or 'en'
-lang = 'en';
-
-const days = {
-    'ru': ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"],
-    'en': ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+const stringFun = function(string) {
+    if(typeof string !== 'string') {
+        return 'Please use a string variable'
+    }
+    let trimmed = string.trim()
+    if(string.length > 30) {
+        return trimmed.slice(0, 30) + '...'
+    }
+    return trimmed
+    
 }
-
-
-//if case
-
-if (lang === 'ru')   {
-    console.log(days['ru']);   
-} else{
-    console.log(days['en']);  
-}
-
-
-//switch case
-switch (lang) {
-    case 'ru':
-        console.log(days['ru']);
-        break;
-    default:
-        console.log(days['en']);    
-}
-
-
-//array
-console.log(days[lang]);
-
-
-//Problem 2
-let namePerson
-//namePerson = 'fgfgg';
-namePerson === 'Артем' ? console.log('director') : namePerson === 'Александр' ? console.log('teacher') : console.log('student'); 
